@@ -1,0 +1,7 @@
+Napisz programy klienta i serwera realizuj¹ce nastêpuj¹cy scenariusz:
+
+serwer tworzy w systemie plików dwa potoki o nazwach fifo1 oraz fifo2 (funkcja mkfifo());
+klient pobiera od u¿ytkownika liczbê n  i wysy³a j¹ przez fifo1 do serwera;
+serwer odczytuje n z fifo1, oblicza wartosc 2n i odsy³a j¹ przez fifo2;
+klient odbiera wartoœæ z fifo2, wyœwietla j¹ na ekran i koñczy pracê.
+Serwer po wykonaniu powy¿szego zadania czeka na kolejne zg³oszenia klientów i postêpuje analogicznie.

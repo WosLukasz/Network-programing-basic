@@ -1,0 +1,7 @@
+Zauwa¿my, ¿e w programie klient.c komunikat od u¿ytkownika wczytuje siê do zmiennej pomocniczej poprzez getline() i nastêpnie kopiuje poprzez strcpy()do pamiêci wspólnej.
+
+Zmodyfikuj program klient.c tak, by wczytywa³ komunikat od u¿ytkownika bezpoœrednio do odpowiedniego obszaru pamiêci wspólnej. Wykorzystaj do tego systemow¹ funkcjê read().
+
+
+
+Przemyœl wady i zalety obu rozwi¹zañ, zw³aszcza w kontekœcie synchronizacji dostêpu do segmentu pamiêci wspólnej.

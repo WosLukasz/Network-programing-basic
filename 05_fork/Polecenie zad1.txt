@@ -1,0 +1,1 @@
+Popraw program zlyexec.c tak, by wyœwietla³ po¿¹dany "Wa¿ny komunikat..." po wykonaniu komendy ls -l.

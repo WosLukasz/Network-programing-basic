@@ -1,0 +1,3 @@
+Napisz programy klienta i serwera pracuj¹ce w sieci Internet z wykorzystaniem protoko³u TCP i realizuj¹ce scenariusz "echa". Dok³adniej, klient ma pobraæ napis od u¿ytkownika i wys³aæ go do serwera.  Serwer ma odes³aæ ten sam komunikat do klienta (klient wypisuje na ekran to co odebra³ od serwera).
+
+Serwer ma dzia³aæ jako serwer wspó³bie¿ny.

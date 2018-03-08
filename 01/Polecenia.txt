@@ -1,0 +1,14 @@
+1. Wyjaœnij znaczenie poszczególnych informacji wyœwietlonych poni¿ej za pomoc¹ komendy ls -l:
+
+-rw-r-----  1 amroz  staff    26 20 wrz 15:03 dane
+-rwxr-xr-x  1 amroz  staff  7363 20 wrz 16:46 hello
+-rw-r--r--  1 amroz  staff    72 20 wrz 16:46 hello.c
+drwxr-xr-x  2 amroz  staff  4096 20 wrz 16:40 inne
+2. Zaloguj siê na serwer ultra60 i utwórz w swoim katalogu domowym katalog/podkatalog SK/0.pliki (Uwaga: sugerujê, by od tej pory wszystkie pliki i programy utworzone na zajêciach i w ramach prac domowych systematycznie archiwizowaæ w utworzonym w³aœnie katalogu SK). 
+Nastêpnie przejdŸ do podkatalogu 0.pliki i korzystaj¹c z linii poleceñ utwórz w nim seriê obiektów tak, by po wykonaniu komendy ls -l uzyskaæ mo¿liwie zbli¿ony wynik do tego z punktu 1 (dwie pierwsze kolumny i ostatnia powinny byæ identyczne jak powy¿ej; plik hello powinien powstaæ w wyniku kompilacji programu hello.c; dok³adniejsze wyjaœnienie na zajêciach).
+3. Wyjaœnij znaczenie poszczególnych informacji wyœwietlonych poni¿ej za pomoc¹ komendy ls -l:
+-rw-r--r--  2 amroz  staff  27 20 wrz 16:39 pliczek
+-rw-r--r--  2 amroz  staff  27 20 wrz 16:39 pliczek-hard
+-rw-r--r--  1 amroz  staff  24 20 wrz 16:39 plik
+lrwxrwxrwx  1 amroz  staff   4 20 wrz 16:40 plik-soft -> plik
+4. PrzejdŸ do podkatalogu inne i, podobnie jak w punkcie 2, utwórz w nim seriê obiektów tak, by po wykonaniu komendy ls -l uzyskaæ mo¿liwie zbli¿ony wynik do tego z punktu 3 (dok³adniejsze wyjaœnienie na zajêciach).

@@ -1,0 +1,7 @@
+Napisz program, który tworzy proces - zombie na 60 sekund (przypomnijmy, ¿e proces staje siê zombie je¿eli w momencie gdy wywo³uje on funkcjê exit(), jego proces macierzysty ,,nie czeka na niego wait()-em'').
+
+Nastêpnie:
+
+wska¿ utworzony proces zombie na liœcie procesów,
+spróbuj zabiæ zombie
+(oczywiœcie, trzeba zd¹¿yæ to zrobiæ zanim proces siê zakoñczy).

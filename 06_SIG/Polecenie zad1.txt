@@ -1,0 +1,9 @@
+Napisz program który wykonuje prost¹ pêtlê powoduj¹c¹ wypisanie co 1 sekundê ustalonego komunikatu, np. w formie
+
+Dzialam od 1 sek.
+Dzialam od 2 sek.
+Dzialam od 3 sek.
+[...]
+(przez np. 60 sekund).
+
+Podczas dzia³ania tego programu w terminalu przetestuj wysy³anie do niego sygna³ów SIGINT, SIGQUIT i SIGTSTP korzystaj¹c wy³¹cznie z odpowiednich skrótów klawiaturowych.

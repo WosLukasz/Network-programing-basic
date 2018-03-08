@@ -1,0 +1,7 @@
+Napisz program, który tworzy proces - sierotê na 60 sekund (przypomnijmy, ¿e proces staje siê sierot¹ je¿eli proces macierzysty zakoñczy swoje dzia³anie przed nim).
+
+Nastêpnie:
+
+sprawdŸ z linii poleceñ, jaki numer przodka ma utworzony proces sierota,
+zakoñcz go poprzez wys³anie odpowiedniego sygna³u z linii poleceñ
+(oczywiœcie, trzeba zd¹¿yæ zrobiæ powy¿sze zanim proces siê zakoñczy).

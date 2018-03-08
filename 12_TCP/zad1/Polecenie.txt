@@ -1,0 +1,4 @@
+Zmodyfikuj do³¹czony program serwerTCP.c tak, by dzia³a³ jako serwer wspó³bie¿ny. To jest, po zaakceptowaniu po³¹czenia serwer powinien powo³aæ potomka do obs³ugi klienta, a przodek powinien natychmiast wróciæ do oczekiwania na nowego klienta.
+
+
+Dodatkowo, ka¿dy roboczy komunikat serwera wyœwietlany na ekranie przez potomka powinien byæ poprzedzony ci¹giem "[Serwer potomek PID: 12345]:", gdzie w miejscu 12345 powinien pojawiæ siê PID danego potomka serwera. Komunikaty serwera macierzystego powinny byæ poprzedzone ci¹giem "[Serwer]:", tak jak w wersji iteracyjnej.

@@ -1,0 +1,16 @@
+Napisz w³asn¹ funkcjê obs³ugi b³êdów wywo³añ funkcji systemowych. Nag³ówek funkcji powinien mieæ kszta³t:
+
+void mysyserr(char *mymsg)
+Funkcja mysyserr ma wypisywaæ na wyjœcie diagnostyczne (stderr) komunikat o b³êdzie i koñczyæ program przez wywo³anie funkcji exit. Komunikat o b³êdzie ma zawieraæ ³añcuch mymsg, numer b³êdu (zmienna zewnêtrzna errno) oraz systemowy komunikat b³êdu (wskazówka: man strerror).
+
+Przyk³ad u¿ycia: efektem wykonania kodu (na FreeBSD)
+
+char buf[128];
+int ile;
+if((ile = read(77, buf, 128)) == -1)
+   mysyserr("blad funkcji read");
+jest wyœwietlenie komunikatu:
+
+ERROR: blad funkcji read (errno: 9, Bad file descriptor)
+
+i zakoñczenie dzia³ania programu.

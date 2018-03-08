@@ -1,0 +1,3 @@
+Zmodyfikuj dołączony program mysimplenslookup.c tak, by realizował zadanie zbliżone do zapytania ,,reverse DNS'', 
+tj., program ma wyświetlać te same informacje co mysimplenslookup.c ale dla parametru będącego adresem hosta 
+w postaci liczbowej (IPv4, czyli adres postaci a.b.c.d).

@@ -1,0 +1,9 @@
+Czêœæ I.
+
+Napisz prosty program klienta protoko³u HTTP, tj. program, który ³¹czy siê poprzez TCP z portem 80  serwera o adresie podanym jako argument wywo³ania programu, wysy³a komendê "GET / HTTP/1.0\n\n" i wyœwietla na ekranie kompletn¹ odpowiedŸ serwera (zwróæ uwagê, ¿e byæ mo¿e bêdzie to wiele linii tekstu!).
+
+Przetestuj na wydzia³owym serwerze www i na kilku innych ogólnie dostêpnych serwerach www.
+
+Czêœæ II.
+
+Spróbuj zrealizowaæ to samo, tj. uzyskaæ odpowiedŸ na zapytanie http  "GET / HTTP/1.0" wys³ane na port 80 wybranego serwera www, za pomoc¹ programu telnet.

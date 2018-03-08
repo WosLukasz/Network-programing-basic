@@ -1,0 +1,5 @@
+Napisz program realizuj¹cy nastêpuj¹cy scenariusz:
+
+przodek tworzy dwa potoki (funkcja pipe()), nastêpnie tworzy potomka, pobiera od u¿ytkownika liczbê ca³kowit¹ n i przesy³a j¹ pierwszym potokiem do potomka;
+potomek obiera liczbê n od przodka, oblicza wartoœæ 2n i odsy³a (drugim potokiem) do przodka;
+przodek wyœwietla na ekranie wynik odebrany od potomka.

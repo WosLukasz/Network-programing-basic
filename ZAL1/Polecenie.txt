@@ -1,0 +1,73 @@
+Napisz program o nazwie  myls, który realizuje zadanie podobne do dzia³ania komendy  ls. Program ma dzia³aæ w dwóch trybach:
+
+Tryb 1. Program  myls uruchamiany bez parametrów ma wyœwietlaæ zawartoœæ bie¿¹cego katalogu w takim samym formacie jak komenda ls -la.
+
+Przyk³ad:
+
+> ./myls
+
+drwxr-xr-x   3 amroz  staff  4096 20 wrz 16:46 .
+drwxr-xr-x  10 amroz  staff  4096 24 paŸ 15:28 ..
+-rw-r-----   1 amroz  staff    26 20 wrz 15:03 dane
+-rwxr-xr-x   1 amroz  staff  9363 20 paŸ 16:46 myls
+-rw-r--r--   1 amroz  staff  1989 20 paŸ 16:46 myls.c
+drwxr-xr-x   2 amroz  staff  4096  4 paŸ 17:28 inne
+-rw-r--r--   1 amroz  staff    12 25 paŸ 11:49 plik
+lrwxrwxrwx   1 amroz  staff     4 25 paŸ 11:50 pliksoft -> plik
+
+
+Tryb 2. Program  myls uruchamiany z jednym parametrem par bêd¹cym nazw¹ pliku, ma wyœwietlaæ informacjê o pliku par zawieraj¹c¹:
+
+typ pliku,
+pe³n¹ œcie¿kê dostêpu do pliku; w przypadku linku symbolicznego - dodatkowo pe³n¹ œcie¿kê do wskazywanego pliku,
+rozmiar w bajtach,
+uprawnienia,
+czasy: ostatniego dostêpu do pliku, modyfikacji, zmiany stanu,
+w przypadku, gdy par jest zwyk³ym plikiem bez praw wykonywania (=> prawdopodobnie jest plikiem tekstowym) nale¿y wyœwietliæ pierwsze 80 znaków zawartoœci,
+w formacie opisanym poni¿ej na przyk³adach:
+
+Przyk³ad 1:
+
+> ./myls plik
+
+Informacje o plik:
+Typ pliku:   zwykly plik
+Sciezka:     /users/staff/mat/amroz/SK/4.staty/plik
+Rozmiar:     12 bajtow
+Uprawnienia: rw-r--r--
+Ostatnio uzywany        25 pazdziernika 2017 roku o 12:49:01
+Ostatnio modyfikowany   25 pazdziernika 2017 roku o 11:49:33
+Ostatnio zmieniany stan 25 pazdziernika 2017 roku o 11:49:33
+Poczatek zawartosci:
+Ala ma kota
+
+Przyk³ad 2:
+
+> ./myls pliksoft
+Informacje o pliksoft:
+Typ pliku:   link symboliczny
+Sciezka:     /users/staff/mat/amroz/SK/4.staty/pliksoft
+Wskazuje na: /users/staff/mat/amroz/SK/4.staty/plik
+Rozmiar:     4 bajty
+Uprawnienia: rwxrwxrwx
+Ostatnio uzywany        25 pazdziernika 2017 roku o 12:49:01
+Ostatnio modyfikowany   25 pazdziernika 2017 roku o 11:50:02
+Ostatnio zmieniany stan 25 pazdziernika 2017 roku o 11:50:02
+
+Przyk³ad 3:
+
+> ./myls inne
+Informacje o inne:
+Typ pliku:   katalog
+Sciezka:     /users/staff/mat/amroz/SK/4.staty/inne
+Rozmiar:     4096 bajtow
+Uprawnienia: rwxr-xr-x
+Ostatnio uzywany        5 pazdziernika 2017 roku o 12:49:01
+Ostatnio modyfikowany   4 pazdziernika 2017 roku o 17:28:07
+Ostatnio zmieniany stan 4 pazdziernika 2017 roku o 17:28:07
+
+Uwagi:
+
+Nale¿y uwzglêdniæ obs³ugê b³êdów i inne ,,dobre praktyki'' programistyczne opisane w dokumencie WA¯NE: jak powinien byæ przygotowany dobry program na zaliczenie Strona''.
+Nie wolno u¿ywaæ funkcji system() ani exec*().
+Ca³oœæ kodu programu powinna byæ umieszczona w jednym pliku Ÿród³owym o nazwie ImieNazwiskoAutora_myls.c (np. GrzegorzBrzeczyszczykiewicz_myls.c) i przes³ana w terminie za pomoc¹ mechanizmu Moodle poni¿ej.

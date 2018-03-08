@@ -1,0 +1,10 @@
+Uzupe³nij program serwerUDP.c o wyœwietlanie adresu IP oraz portu klienta. Zauwa¿my, ¿e klient nie wymaga modyfikacji, tj., klient nie musi w sposób jawny umieszczaæ swojego adresu w komunikacie do serwera. Serwer mo¿e wyodrêbniæ potrzebne informacje odpowiednio ustawiaj¹c argumenty do funkcji recvfrom() (patrz manual/wyk³ad).
+
+Przyk³adowe wykonanie serwera:
+
+[Serwer]: Utworzone gniazdo, slucham na porcie: 13853
+Wiadomosc od jasio (IP: 158.75.112.120, port: 50997): Czesc!
+Wiadomosc od wacek (IP: 158.75.112.120, port: 52178): Wesolych Swiat!!
+Wiadomosc od admin (IP: 158.75.112.121, port: 23246): Prosze wylaczyc ten glupi serwer
+Wiadomosc od jasio (IP:    158.75.2.10, port: 51004): A ja pisze teraz z Linuksa
+Wiadomosc od admin (IP: 158.75.112.121, port: 22130): Prawdziwi mezczyzni uzywaja RAW, nie UDP!

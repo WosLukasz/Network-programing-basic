@@ -1,0 +1,62 @@
+Napisz programy klienta i serwera realizuj¹ce ,,ksiêgê skarg i wniosków'' za pomoc¹ pamiêci dzielonej Systemu V. Dok³adniej:
+
+Serwer:
+uruchamiany z dwoma parametrami: 1) nazw¹ pliku (s³u¿¹c¹ do generowania klucza IPC) oraz 2) liczb¹ ca³kowit¹ n oznaczaj¹c¹ rozmiar ksiêgi, tj. maksymaln¹ liczbê wpisów;
+tworzy segment pamiêci dzielonej zawieraj¹cy n rekordów do przechowywania wpisów;
+ka¿dy rekord w ksiêdze zawiera nazwê u¿ytkownika klienta i jego wpis, ew. inne techniczne dane pozwalaj¹ce poprawnie zrealizowaæ zak³adany scenariusz;
+czeka na sygna³y od u¿ytkownika:
+Ctrl^Z powoduje wypisanie aktualnej zawartoœci ksiêgi  na ekran (tylko niepuste wpisy) jak w poni¿szych przyk³adach;
+Ctrl^C powoduje zakoñczenie pracy serwera (poprzedzone ,,posprz¹taniem'').
+Klient:
+uruchamiany z jednym parametrem: nazw¹ pliku (s³u¿¹c¹ do generowania klucza IPC);
+do³¹cza uprzednio utworzony przez serwer segment pamiêci dzielonej zawieraj¹cy ksiêgê;
+wyœwietla informacjê ile jest jeszcze wolnych rekordów w ksiêdze (por. przyk³ady poni¿ej);
+je¿eli w ksiêdze nie ma ju¿ wolnego miejsca to informuje o tym u¿ytkownika i koñczy pracê;
+je¿eli jeszcze jest wolne miejsce w ksiêdze to pyta u¿ytkownika o komunikat a nastêpnie wpisuje ten komunikat w pierwsze wolne miejsce w ksiêdze (wraz z ew. dodatkowymi technicznymi danymi pozwalaj¹cymi poprawnie zrealizowaæ zak³adany scenariusz - m.in.klient powinien przekazaæ swój UID lub nazwê u¿ytkownika).
+Nale¿y zadbaæ o pe³n¹ obs³ugê b³êdów i precyzyjne komunikaty informuj¹ce u¿ytkownika co siê dzieje i czego program oczekuje (patrz przyk³ady).
+
+Przyk³adowe wykonania klientów:
+
+jasio@xxx> klientksiega /admin/serwerksiega.c
+Klient ksiegi skarg i wnioskow wita!
+[Wolnych 10 wpisow (na 10)]
+Napisz co ci lezy na watrobie:
+> lubudubu lubudubu niech zyje nam admin!
+Dziekuje za dokonanie wpisu do ksiegi
+
+jasio@xxx> klientksiega /admin/serwerksiega.c
+Klient ksiegi skarg i wnioskow wita!
+[Wolnych 9 wpisow (na 10)]
+Napisz co ci lezy na watrobie:
+> wszystko dziala szybko a system jest niezawodny
+Dziekuje za dokonanie wpisu do ksiegi
+
+krnabrnykazio@xxx> klientksiega /admin/serwerksiega.c
+Klient ksiegi skarg i wnioskow wita!
+[Wolnych 8 wpisow (na 10)]
+Napisz co ci lezy na watrobie:
+> admin jest gupi
+Dziekuje za dokonanie wpisu do ksiegi
+(na niebiesko zaznaczam dane podawane przez u¿ytkownika).
+
+Odpowiadaj¹ce powy¿szym przyk³adowe wykonanie serwera:
+
+admin@xxx> ./serwerksiega serwerksiega.c 10
+[Serwer]: tworze klucz... OK (klucz: 16915235)
+[Serwer]: tworze segment pamieci wspolnej dla ksiegi na 10 wpisow...
+          OK (id: 9371648, rozmiar: 1360b)
+[Serwer]: dolaczam pamiec wspolna... OK (adres: 800640000)
+[Serwer]: nacisnij Crtl^Z by wyswietlic stan ksiegi...
+^Z
+Ksiega skarg i wnioskow jest jeszcze pusta
+^Z
+___________  Ksiega skarg i wnioskow:  ___________
+[jasio]: lubudubu lubudubu niech zyje nam admin!
+[jasio]: wszystko dziala szybko a system jest niezawodny
+^Z
+___________  Ksiega skarg i wnioskow:  ___________
+[jasio]: lubudubu lubudubu niech zyje nam admin!
+[jasio]: wszystko dziala szybko a system jest niezawodny
+[krnabrnykazio]: admin jest gupi
+^C
+[Serwer]: dostalem SIGINT => koncze i sprzatam... (odlaczenie: OK, usuniecie: OK)

@@ -1,0 +1,29 @@
+Zmodyfikuj programy klient.c i serwer.c tak, by:
+
+klient dodatkowo pyta³ u¿ytkownika o typ komunikatu który ma przes³aæ,
+serwer wypisywa³ na ekran, oprócz komunikatu, jego typ.
+Przyk³ad dwóch wykonañ klienta:
+
+[Klient]: tworze klucz... OK (klucz:  16915223)
+[Klient]: otwieram kolejke... OK (id: 2883587)
+[Klient]: podaj komunikat ktory chcesz przeslac do serwera:
+Pozdrowienia zasyla Janusz
+[Klient]: jaki ma byc typ komunikatu (liczba calkowita dodatnia): 5
+[Klient]: wyslalem komunikat (OK), koncze.
+
+
+[Klient]: tworze klucz... OK (klucz:  16915223)
+[Klient]: otwieram kolejke... OK (id: 2883587)
+[Klient]: podaj komunikat ktory chcesz przeslac do serwera:
+Co?
+[Klient]: jaki ma byc typ komunikatu (liczba calkowita dodatnia): 3
+[Klient]: wyslalem komunikat (OK), koncze.     
+
+Przyk³ad wykonania serwera (dla powy¿szych akcji klienta):
+
+[Serwer]: tworze klucz... OK (klucz: 16915223)
+[Serwer]: tworze kolejke... OK (id:  2883587)
+[Serwer]: czekam na komunikaty...
+[Serwer]: otrzymalem komunikat typu 5, rozmiaru 32(/32): Pozdrowienia zasyla Janusz
+[Serwer]: otrzymalem komunikat typu 3, rozmiaru 32(/32): Co?
+^C[Serwer]: dostalem SIGINT => koncze i sprzatam...

@@ -1,0 +1,3 @@
+Zmodyfikuj program z Zadania 1 tak, by przechwytywa³ sygna³y SIGINT, SIGQUIT, SIGTSTP, SIGKILL, SIGUSR1. Po przechwyceniu danego sygna³u program powinien wypisaæ numer przechwyconego sygna³u.
+
+Przetestuj wysy³anie powy¿szych sygna³ów (z linii poleceñ i/lub poprzez skróty klawiaturowe) do dzia³aj¹cego programu.

@@ -1,0 +1,3 @@
+Napisz program, który robi ,,to samo'', co komenda  cat z jednym parametrem. To jest, program ma wyœwietlaæ na standardowe wyjœcie zawartoœæ pliku podanego jako argument wykonania programu. Program ma korzystaæ tylko z funkcji systemowych.
+
+Zadbaj o obs³ugê b³êdów.

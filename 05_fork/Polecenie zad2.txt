@@ -1,0 +1,11 @@
+Napisz program, który wykonuje nastêpuj¹ce zadania:
+
+tworzy proces potomny,
+proces potomny pyta u¿ytkownika o liczbê ca³kowit¹ n (z zakresu 0-255),
+proces potomny koñczy dzia³anie przekazuj¹c n do procesu macierzystego poprzez odpowiednie wywo³anie funkcji exit(),
+proces macierzysty czeka na zakoñczenie potomka poprzez odpowiednie wywo³anie wait(); nastêpnie wyœwietla PID potomka i otrzyman¹ od niego wartoœæ n.
+Przyk³ad wykonania:
+
+(Potomek PID: 62722): podaj liczbe: 77
+(Macierz PID: 62721): potomek o PID 62722 przekazal mi 77
+Wskazówka: makro  WEXITSTATUS(), czytaj  man 2 wait.

@@ -1,0 +1,51 @@
+Napisz programy klienta i serwera (wspó³bie¿nego) komunikuj¹ce siê przy pomocy protoko³u TCP realizuj¹ce poni¿szy prosty scenariusz "udawanej sztucznej inteligencji":
+
+Klient:
+³¹czy siê z serwerem poprzez TCP,
+w pêtli pobiera od u¿ytkownika pytania do serwera - "bota" i wyœwietla jego odpowiedzi,
+klient koñczy dzia³anie je¿eli u¿ytkownik napisze "<koniec>".
+Serwer ("bot"):
+oczekuje na po³¹czenia od klientów, tworz¹c nowego potomka dla ka¿dego nowego po³¹czenia (tj., realizuje scenariusz serwera wspó³bie¿nego),
+dla ka¿dego po³¹czenia w pêtli odbiera zapytania i odsy³a odpowiedzi zgodnie z poni¿szymi zasadami:
+je¿eli komunikat od klienta nie jest pytaniem, tj., ostatni znak nie jest równy '?', odsy³a odpowiedŸ "pytaj o co chcesz";
+je¿eli pytanie zaczyna siê od s³owa "czy", to jako odpowiedŸ odsy³a losowo jedn¹ z trzech odpowiedzi: "tak", "nie", "nie wiem";
+je¿eli pytanie nie zaczyna siê od "czy", to odsy³a losowo jedn¹ z kilku zaprojektowanych przez programistê (i zaszytych w kodzie) odpowiedzi,
+je¿eli dostanie komunikat "<koniec>" to koñczy po³¹czenie z danym klientem;
+dodatkowo, serwer wypisuje na ekran "logi" czyli informacje o bie¿¹cych dzia³aniach serwera, zgodnie z przyk³adem poni¿ej.
+
+Przyk³ad dzia³ania klienta:
+
+[amroz@ultra60 AIbot]> ./klient 158.75.112.121 8490
+[Klient]: Lacze z botem (OK)
+[Klient]: Mozesz zadawac pytania (<koniec> konczy rozmowe)
+[ ja]> czesc
+[bot]> pytaj o co chcesz
+[ ja]> jestes kobieta?
+[bot]> nieprzyzwoite pytanie
+[ ja]> czy umiesz jezdzic na rowerze?
+[bot]> tak
+[ ja]> <koniec>
+Przyk³ad dzia³ania drugiego klienta:
+
+[amroz@aleks-2 AIbot]> ./klientLinux 158.75.112.121 8490
+[Klient]: Lacze z botem (OK)
+[Klient]: Mozesz zadawac pytania (<koniec> konczy rozmowe)
+[ ja]> jaki jest sens zycia?
+[bot]> 44
+[ ja]> <koniec>
+Odpowiadaj¹ce powy¿szym dzia³anie serwera:
+
+[amroz@juliusz AIbot]> ./serwer
+[Serwer]: Utworzone gniazdo TCP, slucham na porcie: 8490
+[Serwer PID: 63491]: Zglosil sie klient nr 1 z IP: 158.75.112.120, port: 54748
+[Serwer PID: 63491]: Komunikat klienta nr 1: czesc
+[Serwer PID: 63491]: Odsylam klientowi nr 1: pytaj o co chcesz
+[Serwer PID: 63497]: Zglosil sie klient nr 2 z IP: 158.75.2.10, port: 49594
+[Serwer PID: 63497]: Komunikat klienta nr 2: jaki jest sens zycia?
+[Serwer PID: 63497]: Odsylam klientowi nr 2: 44
+[Serwer PID: 63491]: Komunikat klienta nr 1: jestes kobieta?
+[Serwer PID: 63491]: Odsylam klientowi nr 1: nieprzyzwoite pytanie
+[Serwer PID: 63497]: Klient nr 2 zakonczyl rozmowe
+[Serwer PID: 63491]: Komunikat klienta nr 1: czy umiesz jezdzic na rowerze?
+[Serwer PID: 63491]: Odsylam klientowi nr 1: tak
+[Serwer PID: 63491]: Klient nr 1 zakonczyl rozmowe

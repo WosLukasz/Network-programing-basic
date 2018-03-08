@@ -1,0 +1,62 @@
+Wybierz ulubion¹ liczbê n z zakresu [5001..20000].
+
+Napisz, u¿ywaj¹c protoko³u UDP IPv4, program umo¿liwiaj¹cy czat pomiêdzy dwoma osobami na ró¿nych maszynach. Ma to byæ jeden program (nie dwa programy typu klient-serwer)!
+
+Za³o¿enia dla wersji podstawowej za maks. 10 punktów:
+
+Komunikaty wysy³amy/odbieramy na tym samym porcie równym wybranej liczbie n.
+Pierwszy argument programu to adres domenowy hosta, z którym bêdziemy prowadziæ konwersacjê.
+Jednoczeœnie umo¿liwiamy u¿ytkownikowi odebranie komunikatu i nas³uchujemy komunikatów przychodz¹cych.
+Wyœwietlamy adres IP komputera, z którego przysz³a wiadomoœæ.
+Wpisanie "<koniec>" informuje zdalnego rozmówcê o zakoñczeniu rozmowy i wy³¹cza aplikacjê (uprzednio "sprz¹taj¹c" po sobie).
+Aplikacja informuje u¿ytkownika o faktach do³¹czenia do rozmowy i zakoñczenia rozmowy przez zdalnego rozmówcê (patrz przyk³ady poni¿ej).
+Dodatkowe funkcjonalnoœci (ka¿da za 1 dodatkowy punkt):
+
+Mo¿liwoœæ podania zarówno adresu IP partnera jak i nazwy domenowej jako argument uruchomienia programu. Program musi umieæ automatycznie rozpoznaæ który z dwóch wersji adresów zosta³ podany.
+Drugi argument programu - "nick" u¿ytkownika. Nick ten bêdzie siê pojawia³ lokalnie zamiast napisu "[ja]" (por. przyk³ad) a u naszego rozmówcy obok naszego adresu IP.
+Zaproponuj w³asn¹ "sensown¹" dodatkow¹ funkcjonalnoœæ aplikacji.
+(Informacjê o implementacji ka¿dej z powy¿szych dodatkowych funkcjonalnoœci proszê umieœciæ w komentarzu na pocz¹tku pliku Ÿród³owego, ewentualnie jako czêœæ "powitalnego" komunikatu wyœwietlanego zaraz po uruchomieniu programu.)
+
+Rozwi¹zania bêd¹ testowane na maszynach wydzia³owych: ultra60, juliusz, aleks-2, vh0, ..., vh9.
+
+Proszê przys³aæ jeden plik o nazwie NazwiskoImie-czat.c
+
+Przyk³adowy schemat u¿ycia:
+
+na maszynie vh0 uruchamiamy program: ./czacik aleks-2,
+na maszynie aleks-2: ./czacik vh0,
+komunikaty wpisane na maszynie aleks-2 wyœwietlaj¹ siê po stronie vh0 i na odwrót.
+Przyk³adowe wykonanie (na juliusz):
+
+[amroz@juliusz czatUDP-FreeBSDbuild]> ./czacik aleks-2
+Rozpoczynam czat z 158.75.2.10. Napisz <koniec> by zakonczyc czat.
+[ja]>
+[158.75.2.10 dolaczyl do rozmowy]
+[ja]> czesc
+[ja]>
+[158.75.2.10]> hi
+[ja]> co tam slychac?
+[ja]> napisales swoj czat?
+[ja]>
+[158.75.2.10]> jeszcze nie
+[ja]>
+[158.75.2.10]> wracam do pracy
+[ja]>
+[158.75.2.10 zakonczyl rozmowe]
+[ja]>
+[ja]>
+[ja]> <koniec>
+Odpowiadaj¹ce mu wykonanie (na aleks-2):
+
+[jasio@aleks-2 czatUDP-Linuxbuild]> ./czacik juliusz
+Rozpoczynam czat z 158.75.112.121. Napisz <koniec> by zakonczyc czat.
+[ja]>
+[158.75.112.121]> czesc
+[ja]> hi
+[ja]>
+[158.75.112.121]> co tam slychac?
+[ja]>
+[158.75.112.121]> napisales swoj czat?
+[ja]> jeszcze nie
+[ja]> wracam do pracy
+[ja]> <koniec>

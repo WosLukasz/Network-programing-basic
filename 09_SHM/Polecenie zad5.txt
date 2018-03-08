@@ -1,0 +1,23 @@
+U¿ywaj¹c wybranych przez siebie metod komunikacji IPC Systemu V (kolejki lub pamiêæ wspólna+semafory) napisz dwa programy (w architekturze klient-serwer) umo¿liwiaj¹ce realizacjê prostego czata umo¿liwiaj¹cego rozmowê wielu osób wg nastêpuj¹cego schematu:
+
+wszyscy klienci ³¹cz¹ siê z pojedynczym serwerem,
+w ka¿dej chwili mo¿e pojawiæ siê nowy klient (liczba klientów nie jest z góry ustalona),
+klient wysy³a komunikat do serwera (tekst wiadomoœci),
+serwer rozsy³a otrzyman¹ wiadomoœæ do wszystkich pod³¹czonych klientów.
+Zadania aplikacji:
+
+Serwer:
+
+tworzy niezbêdne obiekty IPC,
+poœredniczy w rozsy³aniu wiadomoœci do klientów,
+po zakoñczeniu pracy usuwa obiekty IPC (uznajemy, ¿e Ctrl^C koñczy pracê serwera).
+Klient:
+
+jako parametr uruchomienia przyjmuje nazwê u¿ytkownika, któr¹ bêdzie siê pos³ugiwa³,
+³¹czy siê z odpowiednimi obiektami IPC (mo¿emy za³o¿yæ, ¿e zna nazwê pliku/katalogu serwera),
+wysy³a do serwera wiadomoœci (nazwa u¿ytkownika oraz treœæ wiadomoœci),
+odbiera z serwera wiadomoœci, które ma wyœwietliæ na ekranie,
+koñczy dzia³anie po wciœniêciu Ctrl^C.
+W wersji uproszczonej mo¿na za³o¿yæ, ¿e rozmawiaj¹ tylko dwie osoby - klient oraz serwer (tj. serwer nale¿y uzupe³niæ o funkcjê przesy³ania wiadomoœci do jedynego klienta).
+
+W wersji pe³nej nale¿y za³o¿yæ, ¿e z poziomu serwera nie mo¿na tworzyæ nowych wiadomoœci (serwer tylko poœredniczy w rozsy³aniu wiadomoœci miêdzy klientami).

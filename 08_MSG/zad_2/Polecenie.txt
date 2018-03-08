@@ -1,0 +1,4 @@
+Napisz programy klienta i serwera, które realizuj¹ dwukierunkow¹ komunikacjê przy pomocy dwóch kolejek: kol1 - odpowiada za komunikacjê klient -> serwer, oraz kol2 - odpowiada za komunikacjê serwer -> klient. Klucze obu kolejek powinny byæ utworzone na bazie tego samego pliku, ale dla ró¿nych parametrów id funkcji ftok().
+
+Klient wysy³a do serwera (poprzez kol1) napis pobrany przez u¿ytkownika, a serwer wyœwietla otrzymany napis i odsy³a klientowi komunikat ,,potwierdzenie'' o tresci: Przyjalem twoj komunikat (za pomoc¹ kol2).
+Klient czeka na powy¿szy komunikat ,,potwierdzenie'' i jeœli go otrzyma, wypisuje na ekran informacjê ¿e komunikacja siê powiod³a.

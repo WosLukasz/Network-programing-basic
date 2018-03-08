@@ -1,0 +1,1 @@
+Uzupe³nij kody za³¹czonych programów klient.c i serwer.c o synchronizacjê dostêpu do segmentu pamiêci wspólnej, przy pomocy semaforów. W szczególnoœci, zadbaj o to by w ka¿dym momencie co najwy¿ej jeden proces móg³ pisaæ do (lub czytaæ z) segmentu pamiêci wspólnej.

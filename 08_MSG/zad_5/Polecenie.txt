@@ -1,0 +1,17 @@
+Napisz programy klienta i serwera realizuj¹ce nastêpuj¹cy scenariusz przy u¿yciu kolejek komunikatów Systemu V:
+
+Klient:
+pobiera od u¿ytkownika dwie liczby ca³kowite,
+pyta u¿ytkownika o wybór jednej z dwóch operacji: mno¿enie lub dodawanie,
+przesy³a do serwera komunikat zawieraj¹cy te informacje oraz ewentualne dodatkowe informacje potrzebne serwerowi - patrz ni¿ej (wskazówka: informacja o operacji mno¿enie vs dodawanie mo¿e byæ ,,zakodowana'' przy pomocy typu komunikatu),
+wyœwietla na ekran informacje zwrotne od serwera.
+Serwer:
+oczekuje na zg³oszenia klientów dopóki nie zostanie wy³¹czony poprzez sygna³ SIGINT (po zakoñczeniu ma po sobie ,,posprz¹taæ'': m.in. usun¹æ kolejkê/kolejki itp.),
+gdy dostanie komunikat od klienta, wykonuje ¿¹dan¹ operacjê (mno¿enie/dodawanie) na parze liczb otrzymanych w komunikacie oraz odsy³a klientowi wynik dzia³ania poprzez komunikat o typie równym PID klienta (por. Zadanie 4),
+ka¿da powy¿sza akcja serwera powinna byæ odnotowana w pliku  aktywnosckalkulatora.log w postaci nowej linii zawieraj¹cej: datê i czas otrzymania komunikatu, nazwê u¿ytkownika klienta, rodzaj operacji (mno¿enie/dodawanie) oraz obie liczby od klienta.
+
+Bardziej zaawansowana wersja programu: umo¿liwienie u¿ytkownikowi wy³¹czanie/w³¹czanie czêœci funkcjonalnoœci serwera przy pomocy sygna³ów w nastêpuj¹cym sensie:
+
+u¿ytkownik ma mieæ mo¿liwoœæ, poprzez wys³anie ustalonych sygna³ów (np. SIGUSR1, SIGUSR2) do procesu serwera, wy³¹czenie obs³ugi dodawania lub wy³¹czenie obs³ugi mno¿enia;
+wy³¹czenie obs³ugi danej operacji ma skutkowaæ tym, ¿e je¿eli serwer dostanie zg³oszenie wykonania tej operacji to ma odes³aæ klientowi komunikat informuj¹cy, ¿e dana operacja nie jest obs³ugiwana; klient wówczas powinien wyœwietliæ na ekran wiadomoœæ informuj¹c¹ o tym u¿ytkownika;
+nale¿y umo¿liwiæ u¿ytkownikowi serwera w³¹czenie wy³¹czonej obs³ugi (tj. powrót do standardowej obs³ugi danej operacji).

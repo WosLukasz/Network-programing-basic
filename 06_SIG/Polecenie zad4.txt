@@ -1,0 +1,1 @@
+Napisz program, który tworzy potomka, który w pêtli co 1 sekundê wysy³a do przodka losowo wybrane sygna³y spoœród SIGUSR1, SIGUSR2. Przodek ma mieæ w³¹czon¹ obs³ugê sygna³ów SIGUSR1 i SIGUSR2 - obs³uga polega na wypisaniu komunikatu: Ojciec: dostalem od syna wiadomosc typu 1 (odp. Ojciec: dostalem od syna wiadomosc typu 2).

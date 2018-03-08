@@ -1,0 +1,9 @@
+Napisz programy klienta i serwera, które realizuj¹ dwukierunkow¹ komunikacjê przy pomocy jednej kolejki komunikatów. Rozró¿nienie kierunku przep³ywu komunikatów ma byæ zrealizowane poprzez typy komunikatów w nastêpuj¹cy sposób:
+
+komunikaty od klienta do serwera maj¹ mieæ typ 1;
+komunikaty od serwera do klienta maj¹ mieæ typ równy PID klienta;
+(aby to zrealizowaæ, klient powinien wysy³aæ serwerowi swój PID jako czêœæ komunikatu - najlepiej poprzez dodatkowe pole struktury zawieraj¹cej komunikat).
+Zadania klienta i serwera analogiczne jak w Zadaniu 2, tj.:
+
+Klient wysy³a do serwera napis pobrany przez u¿ytkownika, a serwer wyœwietla otrzymany napis i odsy³a klientowi komunikat ,,potwierdzenie'' o tresci: Przyjalem twoj komunikat.
+Klient czeka na powy¿szy komunikat ,,potwierdzenie'' skierowane do niego (tj. o typie równym jego PID) i jeœli go otrzyma, wypisuje na ekran informacjê ¿e komunikacja siê powiod³a.

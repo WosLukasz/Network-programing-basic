@@ -1,0 +1,1 @@
+Napisz program, który za pomoc¹ potoku (popen()) odczyta wyjœcie komendy ls i wypisze wynik na ekran.

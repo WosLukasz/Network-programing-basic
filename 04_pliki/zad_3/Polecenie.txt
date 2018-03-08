@@ -1,0 +1,21 @@
+Napisz program, który wyœwietla nastêpuj¹ce informacje o (w³asnym) procesie:
+
+rzeczywisty identyfikator i nazwa u¿ytkownika,
+rzeczywisty identyfikator i nazwa grupy,
+obowi¹zuj¹cy identyfikator i nazwa u¿ytkownika,
+obowi¹zuj¹cy identyfikator i nazwa grupy,
+identyfikator procesu, procesu macierzystego oraz grupy procesów,
+listê zmiennych œrodowiska (same nazwy, bez zawartoœci).
+Przyk³adowe wykonanie:
+
+> ./info
+Rzeczywisty uzytkownik (id, nazwa):  1389, amroz
+Rzeczywista grupa (id, nazwa):        701, staff
+Obowiazujacy uzytkownik (id, nazwa): 1389, amroz
+Obowiazujaca grupa (id, nazwa):       701, staff
+PID: 8172, PPID: 4958, PGRP: 8172
+Zmienne srodowiskowe: 
+LC_ALL SSH_CONNECTION secretvar LANG OLDPWD MM_CHARSET USER PWD HOME SSH_CLIENT SSH_TTY MAIL SHELL TERM SHLVL BLOCKSIZE LOGNAME PATH _
+
+
+Nastêpnie, przy pomocy kole¿anki/kolegi, poeksperymentuj z wykonywaniem tego programu przez innego u¿ytkownika. W szczególnoœci, zaobserwuj zmiany zwi¹zane z set-user-ID i set-group-ID (patrz  man chmod).

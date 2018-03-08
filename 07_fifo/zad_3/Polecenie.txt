@@ -1,0 +1,1 @@
+Zmodyfikuj program fifoserwer_iteracyjny.c tak, by dzia³a³ jako serwer wspó³bie¿ny. To jest, obs³ugê zg³oszenia klienta (tu, wypisanie komunikatu na ekran) powinien realizowaæ nowy specjalnie do tego celu powo³any potomek.

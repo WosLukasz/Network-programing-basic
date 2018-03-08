@@ -1,0 +1,8 @@
+Napisz dwa programy: klient i serwer, takie, ¿e:
+
+serwer w³¹cza obs³ugê sygna³ów SIGUSR1 i SIGUSR2 - obs³uga polega na wypisaniu komunikatu: Serwer: dostalem od klienta wiadomosc typu 1 (odp. Serwer: dostalem od klienta wiadomosc typu 2); nastêpnie wypisuje na ekran swój PID i czeka na sygna³y od klientów;
+klient pyta u¿ytkownika o PID serwera a nastêpnie w pêtli wykonuje poni¿sze zadanie:
+pyta u¿ytkownika o ,,typ akcji'', czyli liczbê ca³kowit¹ S równ¹ 0, 1 lub 2; w zale¿noœci od wartoœci S: jeœli S=1, to wysy³a do serwera sygna³ SIGUSR1;  jeœli S=2, to wysy³a do serwera SIGUSR2; jeœli S=0, to koñczy dzia³anie.
+Przetestuj napisane programy w scenariuszu: jeden serwer, kilku klientów jednoczeœnie.
+
+Przetestuj scenariusz: 1 klient - 1 serwer na tym samym terminalu.

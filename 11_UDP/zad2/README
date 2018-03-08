@@ -1,0 +1,3 @@
+Uzupełnij program serwerUDP.c o wyświetlanie adresu IP oraz portu klienta. Zauważmy, że klient nie wymaga modyfikacji,
+ tj., klient nie musi w sposób jawny umieszczać swojego adresu w komunikacie do serwera. Serwer może wyodrębnić potrzebne 
+informacje odpowiednio ustawiając argumenty do funkcji recvfrom() (patrz manual/wykład).

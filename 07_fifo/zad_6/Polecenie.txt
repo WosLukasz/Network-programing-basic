@@ -1,0 +1,15 @@
+Napisz dwa programy w architekturze klient-serwer, realizuj¹ce "tablicê og³oszeñ" przy u¿yciu potoków z nazw¹.
+
+Programy powinny realizowaæ nastêpuj¹cy scenariusz:
+
+program serwera:
+tworzy nazwany potok (funkcja mkfifo()) pod nazw¹ /tmp/fifo_[login]
+gdzie w miejsce [login] wpisujemy swój login, np. /tmp/fifo_amroz;
+tworzy plik pod nazw¹ /tmp/tablica_[login], gdzie [login] j.w.;
+czyta komunikaty z potoku i dopisuje do pliku /tmp/tablica_[login] w formie: 
+"[nazwa_u¿ytkownika] komunikat", gdzie [nazwa u¿ytkownika] to dowolny ci¹g znaków przyjêty przez u¿ytkownika klienta (patrz ni¿ej).
+po odebraniu sygna³u SIGINT usuwa potok (funkcja unlink()) i koñczy dzia³anie.
+program klienta:
+przyjmuje dwa parametry "nazwa_uzytkownika" oraz "komunikat";
+wysy³a informacje do serwera u¿ywaj¹c potoku /tmp/fifo_[login];
+jeœli potok nie istnieje wyœwietla stosowny komunikat.

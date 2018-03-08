@@ -1,0 +1,8 @@
+Zmodyfikuj programy fifoklient.c  oraz fifoserwer_iteracyjny.c tak, by serwer dodatkowo wypisywa³ PID klienta od którego dosta³ komunikat (oczywiœcie, klient powinien przes³aæ swój PID jako czêœæ zg³oszenia do serwera).
+
+Przyk³ad wykonania serwera:
+
+Serwer: czekam na komunikaty klientow...
+Klient (PID 77288) przyslal 11 bajtow: Ala ma kota
+Klient (PID 77289) przyslal 16 bajtow: jestem niewinny!
+Klient (PID 77301) przyslal  5 bajtow: 12345

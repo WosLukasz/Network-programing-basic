@@ -1,0 +1,5 @@
+Napisz program, który wyœwietla nazwy wszystkich pozycji w katalogu, do którego œcie¿kê dostêpu u¿ytkownik podaje jako argument wykonania programu. Program ma pomijaæ pozycje "." i ".." przy wyœwietlaniu.
+
+Zadbaj o obs³ugê b³êdów.
+
+Wskazówka: obejrzyj plik dir.c.
